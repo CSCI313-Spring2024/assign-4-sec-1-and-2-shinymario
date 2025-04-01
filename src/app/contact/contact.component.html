@@ -1,0 +1,10 @@
+@for(contact of filteredContacts(); track contact) {
+<div class="contacts">
+  <div class="contact-card">
+    <div class="contact-name">{{ contact.fname }}</div>
+    <div class="contact-name">{{ contact.lname }}</div>
+    <div class="contact-email">{{ contact.emailAddress }}</div>
+    <div class="contact-phoneNumber">{{ contact.phoneNumber }}</div>
+  </div>
+</div>
+}
