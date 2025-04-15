@@ -1,3 +1,9 @@
+<div class="contaier homepage"></div>
+<div class="container message" style="text-align: center">
+  Welcome To The Contact Manager!<br />
+  Your Contacts Are Displayed Below: <br />
+</div>
+
 @for(contact of filteredContacts(); track contact) {
 <div class="contacts">
   <div class="contact-card">
@@ -6,12 +12,8 @@
     <div class="contact-email">{{ contact.emailAddress }}</div>
     <div class="contact-phoneNumber">{{ contact.phoneNumber }}</div>
     <div class="container">
-      <button class="btn btn-primary" [routerLink]="['edit', contact.id]">
-        Edit
-      </button>
-      <button class="btn btn-primary" (click)="deleteContact(contact)">
-        Delete
-      </button>
+      <button class="btn pink" [routerLink]="['edit', contact.id]">Edit</button>
+      <button class="btn pink" (click)="deleteContact(contact)">Delete</button>
     </div>
   </div>
 </div>

@@ -1,8 +1,16 @@
-<div class="top-menu">
-  <div class="logo">Contacts</div>
+<div class="main-wrapper">
+  <!-- your whole app content -->
+
+  <div class="top-menu">
+    <div class="logo">
+      Contact Manager
+      <img src="phone.png" class="top-logo" />
+    </div>
+    <div class="container">
+      <button class="btn pink" [routerLink]="'add'">Add Contact</button>
+      <button class="btn pink" [routerLink]="''">List Contact</button>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
 </div>
-
-<button class="btn btn-primary" [routerLink]="'add'">Add Contact</button>
-<button class="btn btn-primary" [routerLink]="''">List Contact</button>
-
-<router-outlet></router-outlet>

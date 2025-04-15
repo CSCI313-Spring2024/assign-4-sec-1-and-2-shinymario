@@ -20,37 +20,53 @@ export class AddcontactComponent {
     private IdService: IdcounterService
   ) {}
 
-  ngOnInit(): void {
-    // Get the next incremented ID
-    this.id = this.IdService.getNextId();
-  }
-  id!: number;
   firstName: string = '';
   lastName: string = '';
   email: string = '';
   phone: string = '';
 
-  newContact: Contact = {
-    id: this.id,
-    fname: '',
-    lname: '',
-    emailAddress: '',
-    phoneNumber: '',
-  }; // Initialize a new contact object
-
   addContact(contactForm: NgForm) {
+    let emailRegex = /^[^@]+@.+\.com$/;
+    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+
+    let match1 = this.email.match(emailRegex);
+    let match2 = this.phone.match(phoneRegex);
     if (!contactForm.valid) {
       alert('Please fill in all fields.');
+      return;
     }
 
-    this.newContact.fname = this.firstName;
-    this.newContact.lname = this.lastName;
-    this.newContact.emailAddress = this.email;
-    this.newContact.phoneNumber = this.phone;
+    if (!isNaN(parseFloat(this.firstName))) {
+      alert('Please Enter A Valid Name');
+      return;
+    }
 
-    this.ContactService.addContact(this.newContact);
+    if (!isNaN(parseFloat(this.lastName))) {
+      alert('Please Enter A Valid Name');
+      return;
+    }
 
-    console.log('Adding new contact:', this.newContact);
+    if (!match1) {
+      alert('Please Enter A Valid Email');
+      return;
+    }
+
+    if (!match2) {
+      alert('Please Enter A Valid Phone');
+      return;
+    }
+
+    const newContact: Contact = {
+      id: this.IdService.getNextId(),
+      fname: this.firstName,
+      lname: this.lastName,
+      emailAddress: this.email,
+      phoneNumber: this.phone,
+    };
+
+    this.ContactService.addContact(newContact);
+
+    console.log('Adding new contact:', newContact);
 
     contactForm.reset();
   }

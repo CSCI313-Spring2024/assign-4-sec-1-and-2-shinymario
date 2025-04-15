@@ -9,6 +9,7 @@
   border-radius: 10px;
   padding: 20px 0;
   box-shadow: 5px 5px 10px #0a5640;
+  background-color: white;
 }
 
 .contact-card .contact-name {
@@ -21,4 +22,16 @@
   margin: 0 auto;
   font-size: 1.2rem;
   user-select: none;
+}
+
+.message {
+  text-shadow: #0a5640;
+  color: white;
+  font-size: large;
+}
+
+.pink {
+  background-color: pink;
+  outline: none;
+  margin-left: 10px;
 }

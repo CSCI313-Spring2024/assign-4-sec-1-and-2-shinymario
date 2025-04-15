@@ -1,25 +1,31 @@
 .contacts {
-    max-width: 500px;
-    margin: 50px auto;
-  }
-  
-  .contact-card {
-    margin-bottom: 40px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px 0;
-    box-shadow: 5px 5px 10px #0a5640;
-  }
-  
-  .contact-card .contact-name {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .contact-card .contact-email {
-    max-width: 360px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    user-select: none;
-  }
-  
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.contact-card {
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 5px 5px 10px #0a5640;
+  background-color: white;
+}
+
+.contact-card .contact-name {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.contact-card .contact-email {
+  max-width: 360px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.pink {
+  background-color: pink;
+  outline: none;
+  margin-left: 10px;
+}

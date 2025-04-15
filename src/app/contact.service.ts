@@ -8,7 +8,7 @@ import { signal } from '@angular/core';
 export class ContactService {
   CONTACTS = signal<Contact[]>([
     {
-      id: 1,
+      id: 0,
       fname: 'John',
       lname: 'Adams',
       emailAddress: 'john.adams@gmail.com',

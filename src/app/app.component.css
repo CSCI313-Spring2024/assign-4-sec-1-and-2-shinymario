@@ -1,10 +1,33 @@
 .top-menu {
-  background: #0a5640;
+  background: #1b221e;
   padding: 2px 15px;
   text-align: center;
 }
 .logo {
-  color: #ffc82e;
+  color: white;
   font-size: 3rem;
   text-align: center;
+  font-weight: bold;
+}
+
+.space-left {
+  margin-left: 10px;
+}
+
+.main-wrapper {
+  background: #242f29;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+.pink {
+  background-color: pink;
+  outline: none;
+  margin-left: 10px;
+}
+
+.top-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
