@@ -1,10 +1,12 @@
 import { Component, computed } from '@angular/core';
 import { ContactService } from '../contact.service';
 import { Router } from '@angular/router';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { Contact } from '../models/contact';
+
 @Component({
   selector: 'app-contact',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
@@ -16,6 +18,10 @@ export class ContactComponent {
   showContacts = false;
   loadContacts() {
     this.ContactService.getContacts;
+  }
+
+  deleteContact(contact: Contact) {
+    this.ContactService.deleteContact(contact);
   }
 
   get contactsList() {

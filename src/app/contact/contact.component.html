@@ -5,6 +5,14 @@
     <div class="contact-name">{{ contact.lname }}</div>
     <div class="contact-email">{{ contact.emailAddress }}</div>
     <div class="contact-phoneNumber">{{ contact.phoneNumber }}</div>
+    <div class="container">
+      <button class="btn btn-primary" [routerLink]="['edit', contact.id]">
+        Edit
+      </button>
+      <button class="btn btn-primary" (click)="deleteContact(contact)">
+        Delete
+      </button>
+    </div>
   </div>
 </div>
 }

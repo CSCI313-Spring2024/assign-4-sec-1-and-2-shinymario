@@ -8,6 +8,7 @@ import { signal } from '@angular/core';
 export class ContactService {
   CONTACTS = signal<Contact[]>([
     {
+      id: 1,
       fname: 'John',
       lname: 'Adams',
       emailAddress: 'john.adams@gmail.com',
@@ -31,9 +32,9 @@ export class ContactService {
   }
 
   // Delete a contact
-  deleteContact(contactPhone: string) {
-    this.CONTACTS.update((prev) =>
-      prev.filter((contact) => contact.phoneNumber !== contactPhone)
+  deleteContact(contactToDelete: Contact) {
+    this.CONTACTS.update(
+      (CONTACTS) => CONTACTS.filter((contact) => contact !== contactToDelete) // Removes the contact
     );
   }
 

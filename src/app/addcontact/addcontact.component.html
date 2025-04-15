@@ -1,0 +1,47 @@
+<div class="contacts">
+  <div class="contact-card">
+    <h2>Add Contact</h2>
+    <form #contactForm="ngForm" (ngSubmit)="addContact(contactForm)">
+      <p>First Name:</p>
+      <input
+        name="firstName"
+        [(ngModel)]="firstName"
+        type="text"
+        placeholder="Enter first name"
+        required
+      />
+
+      <p>Last Name:</p>
+      <input
+        name="lastName"
+        [(ngModel)]="lastName"
+        type="text"
+        placeholder="Enter last name"
+        required
+      />
+
+      <p>Email:</p>
+      <input
+        name="email"
+        [(ngModel)]="email"
+        type="text"
+        placeholder="Enter email"
+        required
+      />
+
+      <p>Phone Number:</p>
+      <input
+        name="phone"
+        [(ngModel)]="phone"
+        type="text"
+        placeholder="Enter phone number"
+        required
+      />
+      <div>
+        <button class="btn btn-primary" type="submit">Add</button>
+        <button class="btn btn-primary" [routerLink]="''">Go Back</button>
+        <p>Here is phone {{ phone }}</p>
+      </div>
+    </form>
+  </div>
+</div>
